@@ -5,7 +5,7 @@
             <p>ABOUT</p>
             <basket />
             <inbox /> 
-            <a-icon type="user" :style="{ fontSize: '20px', color: '#fff'}"  class="icon"/>
+            <a-icon type="user" :style="{ fontSize: '20px', color: '#fff'}"  class="profile"/>
 
         </div>
 
@@ -50,7 +50,7 @@
     color: #fff;
   }
 
-  .icon {
+  .profile {
       margin-left: 20px;
   }
   .logo {

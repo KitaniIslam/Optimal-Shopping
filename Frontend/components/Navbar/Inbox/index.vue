@@ -1,14 +1,31 @@
 <template>
   <a-dropdown>
-    <a-icon type="inbox" :style="{ fontSize: '20px', color: '#fff'}" class="icon"/>
+    <a-icon type="inbox" :style="{ fontSize: '20px', color: '#fff'}" class="inbox"/>
     <a-menu slot="overlay">
-      <a-menu-item key="0">
-        <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">1st menu item</a>
-      </a-menu-item>
+      <!-- <a-empty /> -->
       <a-menu-item key="1">
-        <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">2nd menu item</a>
+        <card />
       </a-menu-item>
-      <!-- <a-menu-divider /> -->
+      <a-menu-divider />
+      <a-menu-item key="0" disabled>
+        Click to Display all invoices.
+      </a-menu-item>
     </a-menu>
   </a-dropdown>
 </template>
+
+<script>
+import Card from './Card';
+// TODO: manage empty list
+export default {
+  components: {
+    Card
+  }
+}
+</script>
+
+<style scoped>
+.inbox {
+  margin-left:20px ;
+}
+</style>

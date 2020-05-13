@@ -15,3 +15,10 @@
     </a-menu>
   </a-dropdown>
 </template>
+
+
+<style scoped>
+.icon {
+  margin-left:20px ;
+}
+</style>
