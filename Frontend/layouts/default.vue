@@ -1,12 +1,11 @@
 <template>
   <div>
     <navbar />
-    <nuxt class="mrg"/>
+    <nuxt/>
   </div>
 </template>
 
 <script>
-
 import Navbar from '~/components/Navbar.vue'
 export default {
   components: {

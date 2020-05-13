@@ -1,6 +1,22 @@
 <template>
   <div class="container">
-    
+    <div class="search-section">
+      <h1>Search for your product Now !</h1>
+      <p>easy search, add to basket in one click</p>
+      <div class="search">
+        <a-input-group compact style="display: flex">
+          <a-select default-value="Option1">
+            <a-select-option value="Option1">
+              Option1
+            </a-select-option>
+            <a-select-option value="Option2">
+              Option2
+            </a-select-option>
+          </a-select>
+          <a-input style/>
+        </a-input-group>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -14,32 +30,39 @@ export default {
 <style scoped>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex: 1;
+}
+
+h1 {
+  color: #fff;
+  margin: 0;
+}
+
+p {
+  color: #fff;
+}
+
+.search {
+  width: 40%;
+}
+
+.search-section{
+  width: 100vw;
+  height: 80vh;
+  background-color: rgb(75, 135, 139);
+  background-image: url('../assets/Images/background2.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+@media ( max-width:801px){
+  .search {
+    width: 90%;
+  }
 }
 </style>
