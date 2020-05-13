@@ -48,7 +48,7 @@
   }
 
   .icon {
-      margin-left: 15px;
+      margin-left: 20px;
   }
   .logo {
     width: 40px;
