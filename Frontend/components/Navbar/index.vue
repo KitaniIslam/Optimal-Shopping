@@ -3,25 +3,28 @@
         <div class="logo" />
         <div class="action">
             <p>ABOUT</p>
-            <a-icon type="shopping-cart" :style="{ fontSize: '20px', color: '#fff'}" class="icon"/>
-            <a-icon type="inbox" :style="{ fontSize: '20px', color: '#fff'}" class="icon"/>
+            <basket />
+            <inbox /> 
             <a-icon type="user" :style="{ fontSize: '20px', color: '#fff'}"  class="icon"/>
+
         </div>
 
   </a-layout-header>
 </template>
 
 <script>
+  import Basket from '~/components/Navbar/Basket'
+  import Inbox from '~/components/Navbar/Inbox'
+
   export default {
-    computed: {
-      userName() {
-        return this.$store.getters['user/getName']
-      }
+    components:  {
+      Basket,
+      Inbox
     },
     methods: {
-      logout() {
-        this.$router.push('/logout');
-      }
+      // logout() {
+      //   this.$router.push('/logout');
+      // }
     }
   }
 </script>
@@ -56,7 +59,7 @@
     border-radius: 50%;
     margin-right: 20px;
     margin-left: 20px;
-    background-image: url('../assets/Logo/my_logo.jpg');
+    background-image: url('../../assets/Logo/my_logo.jpg');
     background-size: cover;
     background-position: center;
   }
