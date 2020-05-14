@@ -1,7 +1,7 @@
 <template>
     <div class="item">
         <div class="info-item">
-            <h3>New invoice :</h3>
+            <p>1 hour ago</p>
         </div>
         <h3>1700 DZD</h3>
         <a-icon type="printer" :style="{ fontSize: '20px'}" class="icon"/>
@@ -13,6 +13,7 @@
 .item {
   display: flex;
   flex-direction: row;
+  margin: 3px 0 3px 0;
 }
 
 .info-item {
