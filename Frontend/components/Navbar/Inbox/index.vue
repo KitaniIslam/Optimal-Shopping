@@ -8,7 +8,7 @@
       </a-menu-item>
       <a-menu-divider />
       <a-menu-item key="0" disabled>
-        Click to Display all invoices.
+        Last activity
       </a-menu-item>
     </a-menu>
   </a-dropdown>
