@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="search-section">
-      <h1>Search for your product Now !</h1>
-      <p>easy search, add to basket in one click</p>
+      <h1>Shop like a Mother Now.</h1>
+      <p>easy search, better experience</p>
       <div class="search">
         <a-input-group compact style="display: flex" >
           <a-select default-value="Option1" >
@@ -41,10 +41,15 @@ export default {
 h1 {
   color: #fff;
   margin: 0;
+  font-size: 4em;
+  text-align: center;
 }
 
 p {
   color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+
 }
 
 .search {
