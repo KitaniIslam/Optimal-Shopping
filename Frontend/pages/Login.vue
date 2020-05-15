@@ -3,7 +3,7 @@
       <div span="12" class="left-container"></div>
       <div span="12" class="right-container">
         <login />
-        <p class="copyright">copyright © {{dt.getFullYear()}} all rights reserved</p>
+        <p class="copyright">copyright © {{dt.getFullYear()}} all rights reserved.</p>
       </div>
     </div>
 </template>
@@ -23,7 +23,7 @@ export default {
 <style scoped>
   .container {
     margin: 0 auto;
-    height: 100vh;
+    height: calc(100vh - 64px);
     display: flex;
     flex-direction: row;
   }
@@ -39,7 +39,7 @@ export default {
     background-size: cover;
     background-position: center;
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 64px) ;
     flex: 1;
   }
   .yellow-txt {
