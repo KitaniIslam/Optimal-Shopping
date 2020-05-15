@@ -6,7 +6,6 @@
             <basket />
             <inbox /> 
             <a-icon type="user" :style="{ fontSize: '20px', color: '#fff'}"  class="profile"/>
-
         </div>
 
   </a-layout-header>
