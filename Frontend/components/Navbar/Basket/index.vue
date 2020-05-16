@@ -1,6 +1,7 @@
 <template>
+<nuxt-link to="/basket">
   <a-dropdown v-model="visible">
-    <a-icon type="shopping-cart" :style="{ fontSize: '20px', color: '#fff'}" class="icon"/>
+    <a-icon type="shopping-cart" :style="{ fontSize: '20px', color: '#fff'}" />
     <a-menu slot="overlay" @click="handleMenuClick">
       <a-menu-item key="3">
         <card />
@@ -26,6 +27,7 @@
       </a-menu-item>
     </a-menu>
   </a-dropdown>
+</nuxt-link>
 </template>
 
 
@@ -67,9 +69,6 @@ export default {
   justify-content: center;
 }
 
-.icon {
-  margin-left:20px ;
-}
 .item {
   display: flex;
   flex-direction: row;
