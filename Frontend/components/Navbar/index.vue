@@ -1,12 +1,19 @@
 <template>
   <a-layout-header class="header">
         <!-- <div class="logo" /> -->
-        <p class="optimal-txt">OPTIMAL <span class="shopping-txt">SHOPPING</span></p>
+        <nuxt-link to="/">
+          <p class="optimal-txt">OPTIMAL <span class="shopping-txt">SHOPPING</span></p>
+        </nuxt-link>
         <div class="action">
-            <p>ABOUT</p>
-            <basket />
-            <inbox /> 
-            <a-icon type="user" :style="{ fontSize: '20px', color: '#fff'}"  class="profile"/>
+            <nuxt-link to="/about">
+              <p>ABOUT</p>
+            </nuxt-link>
+            <search class="action-items" />
+            <basket class="action-items"/>
+            <inbox class="action-items"/> 
+            <nuxt-link to="/profile">
+              <a-icon type="user" :style="{ fontSize: '20px', color: '#fff'}"  class="action-items"/>
+            </nuxt-link>
         </div>
         <a-icon type="menu" class="menu" :style="{ fontSize: '20px', color: '#fff'}" @click="showDrawer" />
         <a-drawer
@@ -41,15 +48,20 @@
 <script>
   import Basket from '~/components/Navbar/Basket'
   import Inbox from '~/components/Navbar/Inbox'
+  import SearchBar from '~/components/SearchBar'
+  import Search from '~/components/Navbar/Search'
 
   export default {
     components:  {
       Basket,
-      Inbox
+      Inbox,
+      SearchBar,
+      Search
     },
     data(){
       return {
         visible: false,
+        visibleSearch: false
       }
     },
     methods: {
@@ -87,9 +99,6 @@
     color: #fff;
   }
 
-  .profile {
-      margin-left: 20px;
-  }
   .logo {
     width: 40px;
     height: 40px;
@@ -113,6 +122,10 @@
 
   .menu {
     display: none;
+  }
+
+  .action-items {
+    margin-left: 20px;
   }
 
   @media (max-width: 480px) {
