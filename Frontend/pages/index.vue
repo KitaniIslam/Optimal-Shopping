@@ -3,31 +3,17 @@
     <div class="search-section">
       <h1>Shop like a Mother Now.</h1>
       <p>easy search, better experience</p>
-      <div class="search">
-        <a-input-group compact style="display: flex" >
-          <a-select default-value="Option1" >
-            <a-select-option value="Option1" >
-              Option1
-            </a-select-option>
-            <a-select-option value="Option2">
-              Option2
-            </a-select-option>
-          </a-select>
-          <a-input placeholder="Search ...">
-              <a-tooltip slot="suffix" title="Find product">
-                <a-icon type="search" style="color: rgba(0,0,0,.45)" />
-              </a-tooltip>
-          </a-input>
-        </a-input-group>
-      </div>
+      <search-bar />
     </div>
   </div>
 </template>
 
 <script>
-
+import SearchBar from '~/components/SearchBar'
 export default {
-  components: {}
+  components: {
+    SearchBar
+  }
 }
 </script>
 
@@ -41,7 +27,7 @@ export default {
 h1 {
   color: #fff;
   margin: 0;
-  font-size: 4em;
+  font-size: 3.5em;
   text-align: center;
 }
 
@@ -50,10 +36,6 @@ p {
   font-size: 1.5em;
   text-align: center;
 
-}
-
-.search {
-  width: 40%;
 }
 
 .search-section{
@@ -69,9 +51,4 @@ p {
   flex-direction: column;
 }
 
-@media ( max-width:801px){
-  .search {
-    width: 90%;
-  }
-}
 </style>
