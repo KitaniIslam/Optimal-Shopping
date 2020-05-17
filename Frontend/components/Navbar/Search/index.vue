@@ -28,11 +28,9 @@ export default {
   },
   methods: {
       showSearch() {
-        console.log(this.visibleSearch)
         this.visibleSearch = true;
       },
       onCloseSearch() {
-        console.log(this.visibleSearch)
         this.visibleSearch = false;
       },
   }

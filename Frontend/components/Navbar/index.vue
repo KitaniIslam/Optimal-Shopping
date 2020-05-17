@@ -43,7 +43,6 @@
       $route () {
         if(this.$route.fullPath != '/' ) this.visibleSearchIcon = true
         else this.visibleSearchIcon = false
-        console.log('route changed', this.$route)
       }
     },
     data(){

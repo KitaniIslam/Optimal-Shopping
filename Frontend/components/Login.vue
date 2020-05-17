@@ -96,11 +96,9 @@ export default {
       this.form.validateFields((err, values) => {
         if (!err) {
             const crid = {email:values.userName, password: values.password}
-            console.log(`account : ${this.haveAccount}`)
             if(this.haveAccount){
                 this.login(crid)
             }else{
-                console.log('im signup')
                 this.signup(crid);
             }
         }
