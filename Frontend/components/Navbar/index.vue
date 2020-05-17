@@ -16,34 +16,8 @@
             </nuxt-link>
         </div>
         <div class="menu">
-          <search class="for-mobile" />
-          <a-icon type="menu" class="action-items" :style="{ fontSize: '20px', color: '#fff'}" @click="showDrawer" />
-          <a-drawer
-            title="MENU"
-            placement="right"
-            :closable="false"
-            :visible="visible"
-            @close="onClose"
-          >
-          <a-menu>
-            <a-menu-item>
-              <a-icon type="shopping-cart"/>
-              Card
-            </a-menu-item>
-            <a-menu-item>
-              <a-icon type="inbox"/>
-              Inbox
-            </a-menu-item>
-            <a-menu-item>
-              <a-icon type="user"/>
-              My Profile
-            </a-menu-item>
-          <a-menu-item>
-              <a-icon type="heart"/>
-              About
-            </a-menu-item>
-          </a-menu>
-          </a-drawer>
+          <search v-if="visibleSearchIcon" class="for-mobile" />
+          <side-menu class="action-items"/>
         </div>
   </a-layout-header>
 </template>
@@ -53,13 +27,15 @@
   import Inbox from '~/components/Navbar/Inbox'
   import SearchBar from '~/components/SearchBar'
   import Search from '~/components/Navbar/Search'
+  import SideMenu from '~/components/SideMenu'
 
   export default {
     components:  {
       Basket,
       Inbox,
       SearchBar,
-      Search
+      Search,
+      SideMenu
     },
     computed: {}
     ,
@@ -72,18 +48,15 @@
     },
     data(){
       return {
-        visible: false,
         visibleSearch: false,
         visibleSearchIcon: false
       }
     },
+    mounted(){
+      if(this.$route.fullPath != '/' ) this.visibleSearchIcon = true;
+      else this.visibleSearchIcon = false;
+    },
     methods: {
-    showDrawer() {
-      this.visible = true;
-    },
-    onClose() {
-      this.visible = false;
-    },
       // logout() {
       //   this.$router.push('/logout');
       // }

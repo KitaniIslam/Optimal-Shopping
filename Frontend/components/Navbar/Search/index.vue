@@ -56,11 +56,7 @@ export default {
   }
 
   .search {
-  width: 100%;
-/* flex: 1;
-  display: flex;
-    align-items: center;
-    flex-direction: column; */
+    width: 100%;
   }
 
   /* @media ( max-width:801px){
