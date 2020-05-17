@@ -15,33 +15,36 @@
               <a-icon type="user" :style="{ fontSize: '20px', color: '#fff'}"  class="action-items"/>
             </nuxt-link>
         </div>
-        <a-icon type="menu" class="menu" :style="{ fontSize: '20px', color: '#fff'}" @click="showDrawer" />
-        <a-drawer
-          title="MENU"
-          placement="right"
-          :closable="false"
-          :visible="visible"
-          @close="onClose"
-        >
-        <a-menu>
+        <div class="menu">
+          <search class="for-mobile" />
+          <a-icon type="menu" class="action-items" :style="{ fontSize: '20px', color: '#fff'}" @click="showDrawer" />
+          <a-drawer
+            title="MENU"
+            placement="right"
+            :closable="false"
+            :visible="visible"
+            @close="onClose"
+          >
+          <a-menu>
+            <a-menu-item>
+              <a-icon type="shopping-cart"/>
+              Card
+            </a-menu-item>
+            <a-menu-item>
+              <a-icon type="inbox"/>
+              Inbox
+            </a-menu-item>
+            <a-menu-item>
+              <a-icon type="user"/>
+              My Profile
+            </a-menu-item>
           <a-menu-item>
-            <a-icon type="shopping-cart"/>
-            Card
-          </a-menu-item>
-          <a-menu-item>
-            <a-icon type="inbox"/>
-            Inbox
-          </a-menu-item>
-          <a-menu-item>
-            <a-icon type="user"/>
-            My Profile
-          </a-menu-item>
-        <a-menu-item>
-            <a-icon type="heart"/>
-            About
-          </a-menu-item>
-        </a-menu>
-        </a-drawer>
+              <a-icon type="heart"/>
+              About
+            </a-menu-item>
+          </a-menu>
+          </a-drawer>
+        </div>
   </a-layout-header>
 </template>
 
@@ -90,7 +93,6 @@
   .action {
       justify-self: flex-end;
     display: flex;
-    /* flex: 1; */
     align-items: center;
     justify-content: center;
   }
@@ -130,7 +132,9 @@
 
   @media (max-width: 480px) {
     .menu {
-      display: block;
+      display: flex;
+      align-items:center ;
+      flex-direction: row;
     }
 
     .action {
