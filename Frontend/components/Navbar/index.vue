@@ -8,7 +8,7 @@
             <nuxt-link to="/about">
               <p>ABOUT</p>
             </nuxt-link>
-            <search class="action-items" />
+            <search v-if="visibleSearchIcon" class="action-items" />
             <basket class="action-items"/>
             <inbox class="action-items"/> 
             <nuxt-link to="/profile">
@@ -61,10 +61,20 @@
       SearchBar,
       Search
     },
+    computed: {}
+    ,
+    watch: {
+      $route () {
+        if(this.$route.fullPath != '/' ) this.visibleSearchIcon = true
+        else this.visibleSearchIcon = false
+        console.log('route changed', this.$route)
+      }
+    },
     data(){
       return {
         visible: false,
-        visibleSearch: false
+        visibleSearch: false,
+        visibleSearchIcon: false
       }
     },
     methods: {
