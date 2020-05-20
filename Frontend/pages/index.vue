@@ -5,23 +5,36 @@
       <p>easy search, better experience</p>
       <search-bar />
     </div>
+    <div class="sub-container">
+    </div>
+      <latest-products style="margin-bottom : 50px" />
   </div>
 </template>
 
 <script>
 import SearchBar from '~/components/SearchBar'
+import LatestProducts from '~/components/LatestProducts'
 export default {
   components: {
-    SearchBar
+    SearchBar,
+    LatestProducts
   }
 }
 </script>
 
 <style scoped>
 .container {
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sub-container {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 40px 0 40px 0;
 }
 
 h1 {
