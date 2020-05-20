@@ -5,19 +5,22 @@
       <p>easy search, better experience</p>
       <search-bar />
     </div>
-    <div class="sub-container">
-    </div>
       <latest-products style="margin-bottom : 50px" />
+    <div class="sub-container">
+     <divider title="Product section" />
+    </div>
   </div>
 </template>
 
 <script>
 import SearchBar from '~/components/SearchBar'
 import LatestProducts from '~/components/LatestProducts'
+import Divider from '~/components/Divider.vue'
 export default {
   components: {
     SearchBar,
-    LatestProducts
+    LatestProducts,
+    Divider
   }
 }
 </script>
