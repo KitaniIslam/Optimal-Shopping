@@ -60,7 +60,7 @@
 
   .title {
     font-size: 2.5em;
-    margin: 0 0 30px 0;
+    margin: 0 0 60px 0;
   }
 
   @media (max-width: 801px) {
