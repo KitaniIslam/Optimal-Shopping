@@ -11,7 +11,5 @@
           default: "Product"
         }
       }
-
   }
-
 </script>
