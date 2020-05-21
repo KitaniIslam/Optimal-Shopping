@@ -1,11 +1,10 @@
 <template>
     <div class="item">
         <div class="info-item">
-          <!-- <a-button  shape="circle" type="danger" icon="minus-circle" size="small" class="delete-button" /> -->
           <a-icon type="minus-circle" :style="{color: 'red'}" class="delete-button" @click="deleteItem"/>
           <p>Product</p>
         </div>
-        <a-input-number id="inputNumber" v-model="quantity" size="small" :min="1" @change="onChange" />
+        <a-input-number  v-model="quantity" size="small" :min="1" @change="onChange" />
         <h3>{{total}} DZD</h3>
     </div>
 </template>

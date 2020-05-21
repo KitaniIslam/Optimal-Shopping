@@ -10,8 +10,8 @@
   export default {
     props: {
       row: {
-        type: [],
-        default: [{
+        type: Array,
+        default: ()=> { return[{
             img: 'https://www.blank-sunglasses.com/wp-content/uploads/2020/02/TRAPPER-SUNGLASSES-BLACK-GOLD-SIDE.jpg',
             title: 'Product ',
             description: 'What is Lorem Ipsum Lorem Ipsum is simply dummy',
@@ -44,7 +44,7 @@
               newPrice: 80
             }
           }
-        ]
+        ]}
       }
     },
     data() {
