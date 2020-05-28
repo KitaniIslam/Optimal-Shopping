@@ -5,7 +5,7 @@
       <p>easy search, better experience</p>
       <search-bar />
     </div>
-    <latest-products style="margin-top : 60px" />
+    <latest-products />
     <div class="sub-container">
       <divider title="Product 1" />
       <single-row />
