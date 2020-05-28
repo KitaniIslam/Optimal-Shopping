@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <p class="bg-text ">NEW ARRIVALS</p>
     <h1 class="title">NEW ARRIVALS</h1>
     <div class="product-card-container">
       <a-card hoverable :style="{minWidth: '200px'}" v-for="item in latest" :key="item.index" class="product-card">
@@ -44,6 +45,18 @@
     flex: 1;
     align-items: center;
     justify-content: center;
+    background-color: #f5f5dc;
+    padding: 70px 0 70px 0;
+    position: relative;
+  }
+
+  .bg-text {
+    position: absolute;
+    font-size: 25rem;
+    margin: 0;
+    opacity: 0.1;
+    text-align: center;
+    line-height: 80%;
   }
 
   .product-card-container {
