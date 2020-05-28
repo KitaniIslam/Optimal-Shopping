@@ -1,6 +1,8 @@
 <template>
   <div class="row">
-    <full v-for="item in row" :key="item.index" :simple="item" />
+    <nuxt-link v-for="item in row" :key="item.title" :to="`/products/${item.title}`" >
+      <full :simple="item" />
+    </nuxt-link>
   </div>
 </template>
 
