@@ -1,20 +1,19 @@
 <template>
     <div class="container">
-        <product-details />
+        <description />
         <a-divider orientation="left" :style="{marginTop: '5rem'}">See also</a-divider>
         <single-row />
     </div>
 </template>
 
 <script>
-import ProductDetails from '~/components/ProductDetails';
+import Description from '~/components/Products/Description.vue'
 import SingleRow from '~/components/Products/SingleRow.vue'
 export default {
     components: {
-        ProductDetails,
+        Description,
         SingleRow
     }
-    
 }
 </script>
 
