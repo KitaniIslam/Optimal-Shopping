@@ -49,9 +49,9 @@
       <a-button type="primary" html-type="submit" class="login-form-button" block>
         {{buttonTxt}}
       </a-button>
-      <a @click="registerMode" class="switch-button">
+      <!-- <a @click="registerMode" class="switch-button">
         {{btnAction}}
-      </a>
+      </a> -->
     <a-form-item >
     </a-form-item>
   </a-form>
@@ -59,6 +59,7 @@
 </template>
 
 <script>
+// TODO: add forget password option 
 export default {
   beforeCreate() {
     this.form = this.$form.createForm(this, { name: 'normal_login' });
@@ -149,7 +150,7 @@ export default {
     },
 };
 </script>
-<style>
+<style scoped>
 .container {
     display: flex;
     align-items: center;
