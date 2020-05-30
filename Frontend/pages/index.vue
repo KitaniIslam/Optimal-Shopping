@@ -7,9 +7,13 @@
     </div>
     <latest-products />
     <div class="sub-container">
-      <divider title="Product 1" />
+      <a-divider orientation="left">
+        Product 1
+      </a-divider>
       <single-row />
-      <divider title="Product 2" />
+      <a-divider orientation="left">
+        Product 2
+      </a-divider>
       <single-row />
     </div>
   </div>
@@ -18,14 +22,12 @@
 <script>
   import SearchBar from '~/components/SearchBar'
   import LatestProducts from '~/components/LatestProducts'
-  import Divider from '~/components/Divider.vue'
   import SingleRow from '~/components/Products/SingleRow.vue'
 
   export default {
     components: {
       SearchBar,
       LatestProducts,
-      Divider,
       SingleRow
     }
   }
