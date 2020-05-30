@@ -21,7 +21,7 @@
             </div>
             <div class="action-section action-alignment">
                 <div class="pricing action-alignment">
-                    <a-input-number  v-model="quantity" size="small" :min="1" :step="1" @change="onChange" />
+                    <a-input-number  v-model="quantity" size="small" :min="1" :step="1" :style="{width: '70px'}" @change="onChange" />
                     <h2 class="price"> {{total }} DZD</h2>
                 </div>
                 <a-button type="primary">Add To Card</a-button>
@@ -101,12 +101,34 @@ export default {
 }
 
 .price {
-    margin: 0 0 0 30px;
+    margin: 0 0 0 10px;
 }
 
 .pricing {
     align-items: baseline;
     justify-content: center;
+
+}
+
+@media (max-width: 801px ) {
+    .container {
+        flex-direction: column;
+    }
+    .description-section { 
+        padding: 20px 0 0 0 ;
+    }
+}
+
+@media (max-width: 480px ) {
+    .action-alignment {
+        flex-direction: column;
+    }
+
+    .pricing {
+        flex-direction: row;
+        align-self: flex-start;
+        padding: 0 0 1rem 0;
+    }
 
 }
 
