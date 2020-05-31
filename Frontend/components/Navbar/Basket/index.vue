@@ -46,10 +46,7 @@
       },
       totalPrice() {
         return this.products.reduce((sum, item) => {
-            return sum += (item.unitPrice * item.quantity)
-          }
-
-          , 0);
+            return sum += (item.unitPrice * item.quantity)}, 0);
       }
     },
     mounted() {},
@@ -62,12 +59,10 @@
       },
       order() {
         this.$notification.open({
-            type: "success",
-            message: 'Your order has been sent',
-            description: 'You can Change/Cancel order in less than 1 hour.'
-          }
-
-        )
+          type: "success",
+          message: 'Your order has been sent',
+          description: 'You can Change/Cancel order in less than 1 hour.'
+        })
       }
     }
   }
