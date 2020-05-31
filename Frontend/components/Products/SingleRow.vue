@@ -12,6 +12,7 @@
       row: {
         type: Array,
         default: ()=> { return[{
+            id:1,
             img: 'https://www.blank-sunglasses.com/wp-content/uploads/2020/02/TRAPPER-SUNGLASSES-BLACK-GOLD-SIDE.jpg',
             title: 'Product ',
             description: 'What is Lorem Ipsum Lorem Ipsum is simply dummy',
@@ -23,6 +24,7 @@
             }
           },
           {
+            id:2,
             img: 'https://www.blank-sunglasses.com/wp-content/uploads/2020/02/TRAPPER-SUNGLASSES-BLACK-GOLD-SIDE.jpg',
             title: 'Product ',
             description: 'What is Lorem Ipsum Lorem Ipsum is simply dummy',
@@ -34,6 +36,7 @@
             }
           },
           {
+            id:3,
             img: 'https://www.blank-sunglasses.com/wp-content/uploads/2020/02/TRAPPER-SUNGLASSES-BLACK-GOLD-SIDE.jpg',
             title: 'Product ',
             description: 'What is Lorem Ipsum Lorem Ipsum is simply dummy',
