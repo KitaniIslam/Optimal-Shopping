@@ -4,30 +4,34 @@
       <a-icon type="shopping-cart" :style="{ fontSize: '20px', color: '#fff'}" />
       <a-menu slot="overlay" @click="handleMenuClick">
         <a-menu-item v-for="item in products" :key="(item.id+1)">
-          <card :product="item" />
+          <card :product="{...item,index:item.id}" />
         </a-menu-item>
-        <a-menu-item key="0">
+        <a-menu-item v-if="products.length" key="0">
           <div class="item">
             <div class="sub-item">
               <h3>Totale : <span> {{totalPrice}}</span></h3>
             </div>
             <div class="sub-item">
-              <a-button icon="shopping-cart" size="small" type="primary">
-                Order
-              </a-button>
+              <a-button icon="shopping-cart" size="small" type="primary">Order </a-button>
             </div>
           </div>
         </a-menu-item>
+        <a-empty v-else />
       </a-menu>
     </a-dropdown>
   </nuxt-link>
 </template>
 
-
 <script>
   import Card from './Card.vue';
+  import {
+    Empty
+  } from 'ant-design-vue';
 
   export default {
+    beforeCreate() {
+      this.simpleImage = Empty.PRESENTED_IMAGE_SIMPLE;
+    },
     components: {
       Card
     },
@@ -42,8 +46,10 @@
       },
       totalPrice() {
         return this.products.reduce((sum, item) => {
-          return sum += (item.unitPrice * item.quantity)
-        }, 0);
+            return sum += (item.unitPrice * item.quantity)
+          }
+
+          , 0);
       }
     },
     mounted() {},
@@ -56,10 +62,12 @@
       },
       order() {
         this.$notification.open({
-          type: "success",
-          message: 'Your order has been sent',
-          description: 'You can Change/Cancel order in less than 1 hour.'
-        })
+            type: "success",
+            message: 'Your order has been sent',
+            description: 'You can Change/Cancel order in less than 1 hour.'
+          }
+
+        )
       }
     }
   }
@@ -80,7 +88,6 @@
     margin: 3px 0 3px 0;
     justify-content: space-between;
   }
-
 
   p {
     margin: 0;
