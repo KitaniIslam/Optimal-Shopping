@@ -29,7 +29,7 @@
         this.$store.commit('card/changeQuantity',{quantity:quantity,index:this.product.id});
         },
       deleteItem() {
-        // TODO: delete item from card list
+        this.$store.commit('card/deleteItemFromCard',{index:this.product.index});
       }
     }
   }
