@@ -71,7 +71,7 @@ export const state = () => ({
   
 export const mutations = {
     addToCard (state, payload) {
-        // payload is the element of the product ind recommendation
+        // payload is the element of the product in recommendation
         state.card.push(payload);
     },
     addTorecommendation(state, payload){
@@ -86,8 +86,8 @@ export const mutations = {
         (state.recommendation[index].value).push(payload.value);
         return getAddedItemIndex(index);
     },
-    deleteItemFromCard(state, index){
-        state.splice(index,1);
+    deleteItemFromCard(state, payload){
+        state.card.splice(payload.index,1);
     },
     showModal(state) {
         state.modal = true;
@@ -133,7 +133,7 @@ export const getters = {
                 promotionApplied: false, 
                 id: index++
             } ;
-        })
+        });
     }
 };
 
