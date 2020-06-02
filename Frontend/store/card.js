@@ -8,11 +8,10 @@ export const state = () => ({
         category: 'b',
         id: 0,
         quantity: 3
-
     }
 ],
-    recommendation: [{
-        category: 'b',
+recommendation: [{
+    category: 'b',
         value: [{
             inStore: 0,
             category: 'b',
@@ -127,6 +126,7 @@ export const state = () => ({
       }
       ],
     modal: false,
+    modalInfo: {},
     selectedCategory: 'h'
   })
   
@@ -160,10 +160,12 @@ export const mutations = {
     deleteItemFromCard(state, payload){
         state.card.splice(payload.index,1);
     },
-    showModal(state) {
+    showModal(state,payload) {
+        state.modalInfo = payload;
         state.modal = true;
     },
     hideModal(state) {
+        state.modalInfo= {};
         state.modal = false;
     },
     changeQuantity(state, payload){
@@ -175,6 +177,9 @@ export const mutations = {
 export const getters = {
     getModalVisible(state){
         return state.modal;
+    },
+    getModalInfo(state){
+        return state.modalInfo;
     },
     getRecommendation(state ){
         const index = getCategoryIndex(state.recommendation , state.selectedCategory);
