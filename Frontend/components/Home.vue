@@ -1,15 +1,41 @@
 <template>
-  <home />
+    <div class="container">
+    <div class="search-section">
+      <h1>Shop like a Mother Now.</h1>
+      <p>easy search, better experience</p>
+      <search-bar />
+    </div>
+    <latest-products />
+    <div class="sub-container">
+        <div v-for="item in feed" :key="item.category">
+            <a-divider orientation="left">
+                {{item.category}}
+            </a-divider>
+            <single-row :row="item.value"/>
+        </div>
+    </div>
+  </div>
 </template>
+
 
 <script>
   import SearchBar from '~/components/SearchBar'
   import LatestProducts from '~/components/LatestProducts'
   import SingleRow from '~/components/Products/SingleRow.vue'
-  import Home from '~/components/Home.vue'
+
   export default {
     components: {
-      Home
+      SearchBar,
+      LatestProducts,
+      SingleRow
+    },
+    computed: {
+        feed(){
+            return this.$store.getters['card/getRecommendations'];
+        }
+    },
+    mounted(){
+      console.log((this.$store.getters['card/getRecommendations'])[0].value)
     }
   }
 
