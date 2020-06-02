@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <full v-for="item in row" :key="item.title" :simple="item" />
+    <full v-for="item in row" :key="item.title+item.id" :simple="item" />
   </div>
 </template>
 
