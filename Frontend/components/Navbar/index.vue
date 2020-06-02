@@ -37,8 +37,6 @@
       Search,
       SideMenu
     },
-    computed: {}
-    ,
     watch: {
       $route () {
         if(this.$route.fullPath != '/' ) this.visibleSearchIcon = true
