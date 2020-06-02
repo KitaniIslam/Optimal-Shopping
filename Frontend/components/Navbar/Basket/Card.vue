@@ -26,10 +26,10 @@
     },
     methods: {
       onChange(quantity) {
-        this.$store.commit('card/changeQuantity',{quantity:quantity,index:this.product.id});
+        this.$store.commit('products/changeQuantity',{quantity:quantity,index:this.product.id});
         },
       deleteItem() {
-        this.$store.commit('card/deleteItemFromCard',{index:this.product.index});
+        this.$store.commit('products/deleteItemFromCard',{index:this.product.index});
       }
     }
   }

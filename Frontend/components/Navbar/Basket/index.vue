@@ -42,7 +42,7 @@
     },
     computed: {
       products() {
-        return this.$store.getters['card/getCardContent'];
+        return this.$store.getters['products/getCardContent'];
       },
       totalPrice() {
         return this.products.reduce((sum, item) => {

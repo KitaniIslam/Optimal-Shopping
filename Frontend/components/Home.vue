@@ -31,11 +31,11 @@
     },
     computed: {
         feed(){
-            return this.$store.getters['card/getRecommendations'];
+            return this.$store.getters['products/getRecommendations'];
         }
     },
     mounted(){
-      console.log((this.$store.getters['card/getRecommendations'])[0].value)
+      console.log((this.$store.getters['products/getRecommendations'])[0].value)
     }
   }
 

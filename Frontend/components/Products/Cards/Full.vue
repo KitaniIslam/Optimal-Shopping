@@ -57,7 +57,7 @@
     },
     methods: {
       addToCard() {
-        this.$store.commit('card/showModal', {
+        this.$store.commit('products/showModal', {
           title: this.simple.title,
           id: this.simple.id,
           price: this.simple.price,

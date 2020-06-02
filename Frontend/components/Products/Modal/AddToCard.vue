@@ -14,10 +14,10 @@
   export default {
     computed: {
       modalVisible: function () {
-        return this.$store.getters['card/getModalVisible']
+        return this.$store.getters['products/getModalVisible']
       },
       modalInfo: function () {
-        return this.$store.getters['card/getModalInfo']
+        return this.$store.getters['products/getModalInfo']
       }
     },
     data() {
@@ -27,9 +27,9 @@
     },
     methods: {
       handleOk() {
-        this.$store.commit('card/addToCard', {quantity:this.quantity,category:this.modalInfo.category,id:this.modalInfo.inStore})
+        this.$store.commit('products/addToCard', {quantity:this.quantity,category:this.modalInfo.category,id:this.modalInfo.inStore})
         this.quantity = 1;
-        this.$store.commit('card/hideModal');
+        this.$store.commit('products/hideModal');
         this.$notification.open({
           type: 'success',
           message: 'Added successfully',
@@ -38,7 +38,7 @@
       },
       cancel() {
         this.quantity = 1;
-        this.$store.commit('card/hideModal');
+        this.$store.commit('products/hideModal');
       },
       onChange(quantity) {
         this.quantity = quantity;
