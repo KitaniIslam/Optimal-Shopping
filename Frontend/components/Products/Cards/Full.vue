@@ -19,7 +19,6 @@
         <a-icon key="edit" type="shopping" @click="addToCard" />
       </template>
     </a-card>
-    <addToCard :product="{ title:simple.title,id:simple.id, price: simple.price }" />
   </div>
 </template>
 
@@ -54,21 +53,22 @@
       }
     },
     data() {
-      return {
-        feedbackModal: false,
-      }
+      return {}
     },
     methods: {
       addToCard() {
-        this.$store.commit('card/showModal');
+        this.$store.commit('card/showModal', {
+          title: this.simple.title,
+          id: this.simple.id,
+          price: this.simple.price,
+          inStore: this.simple.inStore,
+          category: this.simple.category
+        });
       },
-      sendFeedback() {
-        this.feedbackModal = true;
-      },
+      sendFeedback() {},
       goDetails() {
         this.$router.push(`/products/${this.simple.title}`);
-      },
-      handleOk() {}
+      }
     }
   }
 
