@@ -11,43 +11,7 @@
     props: {
       row: {
         type: Array,
-        default: ()=> { return[{
-            id:1,
-            img: 'https://www.blank-sunglasses.com/wp-content/uploads/2020/02/TRAPPER-SUNGLASSES-BLACK-GOLD-SIDE.jpg',
-            title: 'Product ',
-            description: 'What is Lorem Ipsum Lorem Ipsum is simply dummy',
-            price: 30,
-            havePromotion: false,
-            haveDiscount: {
-              value: false,
-              newPrice: 0
-            }
-          },
-          {
-            id:2,
-            img: 'https://www.blank-sunglasses.com/wp-content/uploads/2020/02/TRAPPER-SUNGLASSES-BLACK-GOLD-SIDE.jpg',
-            title: 'Product ',
-            description: 'What is Lorem Ipsum Lorem Ipsum is simply dummy',
-            price: 150.50,
-            havePromotion: true,
-            haveDiscount: {
-              value: false,
-              newPrice: 0
-            }
-          },
-          {
-            id:3,
-            img: 'https://www.blank-sunglasses.com/wp-content/uploads/2020/02/TRAPPER-SUNGLASSES-BLACK-GOLD-SIDE.jpg',
-            title: 'Product ',
-            description: 'What is Lorem Ipsum Lorem Ipsum is simply dummy',
-            price: 100,
-            havePromotion: false,
-            haveDiscount: {
-              value: true,
-              newPrice: 80
-            }
-          }
-        ]}
+        default: ()=> { return[] }
       }
     },
     data() {
